@@ -54,9 +54,15 @@ public class Ball {
         if (x + size >= surface.getWidth()) {
             x = surface.getWidth() - size;
             vx *= -1;
+            surface.setScore1();
+            this.x = surface.getWidth() / 2.0;
+            this.y = surface.getHeight() / 2.0;
         } else if (x < 0) {
             x = 0;
             vx *= -1;
+            surface.setScore2();
+            this.x = surface.getWidth() / 2.0;
+            this.y = surface.getHeight() / 2.0;
         }
 
         // eje Y
